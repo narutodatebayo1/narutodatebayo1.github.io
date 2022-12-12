@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .screen{
+            width:200px;
+            height:390px;
+            border:solid;
+        }
+        .loker{
+            border:solid 1.5px black;
+            border-radius: 4px;
+            width:25px;
+            height:25px;
+            text-align: center;
+            display: inline-block;
+            margin:2px;
+            color:white;
+            cursor: pointer;
+        }
+        .lokers{
+            margin-left: auto;
+            margin-right: auto;
+            width:fit-content
+        }
+        .nav{
+            height:30px;
+            position: relative;
+            line-height: 30px;
+            background-color: aqua;
+        }
+        .kepala{
+            width:20px;
+            height:20px;
+            border-radius: 20px;
+        }
+        img{
+            width:20px;
+            height:20px;
+            border-radius:20px;
+            position: absolute;
+            right: 5px;
+            top:5px;  
+        }
+        .payment{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    ceritany layar hp kentang anda<br>
+    <div class="screen">
+        <div class="nav">
+            Binus Locker
+            <img src="at.jpg">
+        </div>
+        <div class="lokers">
+            <div class="loker" style="background-color:red" onclick="lock(event)">1</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">2</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">3</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">4</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">5</div>
+            <br>
+            <div class="loker" style="background-color:green" onclick="lock(event)">6</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">7</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">8</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">9</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">10</div>
+            <br>
+            <div class="loker" style="background-color:green" onclick="lock(event)">11</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">12</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">13</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">14</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">15</div>
+            <br>
+            <div class="loker" style="background-color:red" onclick="lock(event)">16</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">17</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">18</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">19</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">20</div>
+            <br>
+            <div class="loker" style="background-color:red" onclick="lock(event)">21</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">22</div>
+            <div class="loker" style="background-color:red" onclick="lock(event)">23</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">24</div>
+            <div class="loker" style="background-color:green" onclick="lock(event)">25</div>
+        </div>
+        <div id="text">Pilih loker!</div>
+        <div style="display:none" id="pay">
+            <button><a href="pay.html">bca</a></button><br>
+            <button><a href="pay.html">bri</a></button><br>
+            <button><a href="pay.html">gopay</a></button><br>
+            <button><a href="pay.html">ovo</a></button><br>
+            <button><a href="pay.html">dana</a></button>
+        </div>
+    </div>
+    <script>
+        function lock(event){
+            if(event.target.style.backgroundColor == "red"){
+                document.getElementById("text").innerHTML = "Locker number " + event.target.innerHTML + " is not available"
+            } else if(event.target.style.backgroundColor == "green"){
+                document.getElementById("text").innerHTML = "Locker number " + event.target.innerHTML + " is available<br>Please select your payment method"
+                document.getElementById("pay").style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>
