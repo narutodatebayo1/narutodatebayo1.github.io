@@ -1,0 +1,78 @@
+<style>
+    .big{
+    font-size: 100px; 
+    font-family: sans-serif;
+    }
+    .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    user-select: none;
+    }
+    .box1{
+    width:83%;
+    text-align:center;
+    }
+    .box2{
+    width:17%;
+    height:100%;
+    border-left: solid;
+    overflow: auto;
+    }
+</style>
+
+<body onkeydown="keydown(event)">
+    <div class="center">
+    	<div id="thetime" class="box1">
+        	<a class="big" id="sec">00</a>
+    	    <a id="mil">00</a>
+        </div>
+        <div id="result" class="box2">
+        	
+        </div>
+    </div>
+
+    <script>
+        var press = 0;
+        var myInterval;
+        var sec_var = 0;
+        var mil_var = 0;
+        var resultbox = document.getElementById("result");
+
+        function keydown(event){
+            press++;
+            if(press % 2 == 1 && event.keyCode === 32){
+                myInterval = setInterval(mil_function, 10)
+            }
+            else if(press % 2 == 0 && event.keyCode === 32){
+                clearInterval(myInterval);
+                var time = document.createElement("ul")
+                time.innerHTML = document.getElementById("thetime").innerHTML;
+                document.getElementById("result").appendChild(time);
+                press = 0;
+                sec_var = 0;
+                mil_var = 0;
+                document.getElementById("mil").innerHTML = "0" + mil_var;
+                document.getElementById("sec").innerHTML = "0" + sec_var;
+                
+
+                
+            }
+            
+        }
+        function mil_function(){
+            mil_var++;
+            if       (mil_var < 10){document.getElementById("mil").innerHTML = "0" + mil_var}
+            else if  (mil_var > 9){document.getElementById("mil").innerHTML = mil_var}
+            if  (mil_var == 100){
+                mil_var = 0;
+                document.getElementById("mil").innerHTML = "0" + mil_var;
+                sec_var++;
+
+                if       (sec_var < 10){document.getElementById("sec").innerHTML = "0" + sec_var}
+                else if  (sec_var > 9){document.getElementById("sec").innerHTML = sec_var}
+            }
+        }
+    </script>
+</body>
