@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{height:99%}
+        body{
+            height:99%;
+            background-color: #b8c6db;
+            background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
+        }
+        #a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 99%;
+        }
+        #b{
+            display: flex;
+            /* justify-content: center;
+            align-items: center;
+            width:300px; */
+            padding:40px;
+            height:auto;
+            min-height: 30px; /*55px*/
+            border-radius: 15px;
+            background-color: white;
+        }
+        #c{
+            width:300px;
+            height:auto;
+        }
+        #d{
+            height:30px;
+            width:300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+        #e{
+            width: 300px;
+            height:270px;
+            display: none;
+        }
+        
+        #f{
+            width:300px;
+            height:135px;
+            /* background-color: coral; */
+        }
+
+        #g{
+            width:300px;
+            height:135px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #h{
+            line-height: 1.65;
+        }
+        #i{
+            height:110px;
+            width:auto;
+            border:solid;
+        }
+        #y{
+            width:auto;
+            height:110px;
+        }
+        input{
+            border: none;
+            height:26.5px;
+            width: 270px;
+            outline: none;
+            border-bottom: solid 1.5px;
+        }
+        button{
+            border:none;
+            width:30px;
+            height:30px;
+            padding:5px;
+            cursor: pointer;
+            outline: none;
+            background-color: white;
+        }
+        img{width:20px; height:20px;}
+    </style>
+</head>
+<body>
+
+    <div id="a">
+        <div id="b">
+            <div id="c">
+                <div id="d">
+                    <input type="text" id="button" spellcheck="false" placeholder="Enter a country name">
+                    <button id="btn">
+                        <img src="49116.jpg" alt="">
+                    </button>
+                </div>
+                <div id="e">
+                    <div id="g">
+                        <div id="i">
+                            <img id="y">
+                        </div>
+                    </div>
+                    <div id="f">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+    
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            async function a(){
+                let name = document.getElementById("button").value;
+                const url = `https://restcountries.com/v3.1/name/${name}`;
+                const resp = await fetch(url)
+                const data = await resp.json()
+                const population = data[0].population
+                const country = data[0].name.official
+                const region = data[0].region
+                const currency = data[0].currencies[Object.keys(data[0].currencies)].name
+                const currency1 = Object.keys(data[0].currencies)[0]
+                const capital = data[0].capital
+
+
+                console.log(data);
+                document.getElementById("e").style.display = "block"
+                document.getElementById("y").src = data[0].flags.png
+                document.getElementById("f").innerHTML = `
+                <span id="h">Name\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0: ${country}</span>
+                <br>
+                <span id="h">Capital\xa0\xa0\xa0\xa0\xa0\xa0\xa0: ${capital}</span>
+                <br>
+                <span id="h">Region\xa0\xa0\xa0\xa0\xa0\xa0\xa0: ${region}</span>
+                <br>
+                <span id="h">Population  : ${population}</span>
+                <br>
+                <span id="h">Currency\xa0\xa0\xa0\xa0: ${currency} - ${currency1}</span>
+                `
+            }
+            // document.getElementById("e").style.display = "block"
+            a()
+        })
+    </script>
+</body>
+</html>
