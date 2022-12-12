@@ -1,0 +1,315 @@
+<style>
+.flexc {
+  display: flex;
+  background-color:black;
+  width:308px;
+}
+
+.flexc > div {
+    width:100px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin:2px;
+    font-size: 80px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.center1{
+    width:308px;
+
+}
+</style>
+
+
+<div id="case" class="center">
+    <div class="center1">
+        <div class="flexc">
+            <div id="one" onclick="a()"></div>
+            <div id="two" onclick="b()"></div>
+            <div id="thr" onclick="c()"></div>
+        </div>
+        <div class="flexc">
+            <div id="fou" onclick="d()"></div>
+            <div id="fiv" onclick="e()"></div>
+            <div id="six" onclick="f()"></div>
+        </div>
+        <div class="flexc">
+            <div id="sev" onclick="g()"></div>
+            <div id="eig" onclick="h()"></div>
+            <div id="nin" onclick="i()"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ⨉  ◯
+var move = 0;
+var shape1 = "⨉";
+var shape2 = "◯";
+var box1 = document.getElementById("one").innerHTML
+var box2 = document.getElementById("two").innerHTML
+var box3 = document.getElementById("thr").innerHTML
+
+function a(){
+    while(document.getElementById("one").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("one").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("one").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function b(){
+    while(document.getElementById("two").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("two").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("two").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function c(){
+    while(document.getElementById("thr").innerHTML == ""){ 
+        move++
+        if(move % 2 == 1){document.getElementById("thr").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("thr").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function d(){
+    while(document.getElementById("fou").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("fou").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("fou").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function e(){
+    while(document.getElementById("fiv").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("fiv").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("fiv").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function f(){
+    while(document.getElementById("six").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("six").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("six").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function g(){
+    while(document.getElementById("sev").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("sev").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("sev").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function h(){
+    while(document.getElementById("eig").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("eig").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("eig").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function i(){
+    while(document.getElementById("nin").innerHTML == ""){
+        move++;
+        if(move % 2 == 1){document.getElementById("nin").innerHTML = shape1}
+        else if(move % 2 == 0){document.getElementById("nin").innerHTML = shape2}
+    }
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("two").innerHTML == shape1 && document.getElementById("thr").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("fou").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("sev").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("one").innerHTML == shape1 && document.getElementById("fou").innerHTML == shape1 && document.getElementById("sev").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("two").innerHTML == shape1 && document.getElementById("fiv").innerHTML == shape1 && document.getElementById("eig").innerHTML == shape1){setTimeout(ab,50)}
+    if(document.getElementById("thr").innerHTML == shape1 && document.getElementById("six").innerHTML == shape1 && document.getElementById("nin").innerHTML == shape1){setTimeout(ab,50)}
+
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("two").innerHTML == shape2 && document.getElementById("thr").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("fou").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("sev").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("one").innerHTML == shape2 && document.getElementById("fou").innerHTML == shape2 && document.getElementById("sev").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("two").innerHTML == shape2 && document.getElementById("fiv").innerHTML == shape2 && document.getElementById("eig").innerHTML == shape2){setTimeout(cd,50)}
+    if(document.getElementById("thr").innerHTML == shape2 && document.getElementById("six").innerHTML == shape2 && document.getElementById("nin").innerHTML == shape2){setTimeout(cd,50)}
+}
+
+function ab(){
+    alert('player "⨉" win');
+    document.getElementById("one").innerHTML = "";
+    document.getElementById("two").innerHTML = "";
+    document.getElementById("thr").innerHTML = "";
+    document.getElementById("fou").innerHTML = "";
+    document.getElementById("fiv").innerHTML = "";
+    document.getElementById("six").innerHTML = "";
+    document.getElementById("sev").innerHTML = "";
+    document.getElementById("eig").innerHTML = "";
+    document.getElementById("nin").innerHTML = "";
+    move = 0
+}
+function cd(){
+    alert('player "◯" win');
+    document.getElementById("one").innerHTML = "";
+    document.getElementById("two").innerHTML = "";
+    document.getElementById("thr").innerHTML = "";
+    document.getElementById("fou").innerHTML = "";
+    document.getElementById("fiv").innerHTML = "";
+    document.getElementById("six").innerHTML = "";
+    document.getElementById("sev").innerHTML = "";
+    document.getElementById("eig").innerHTML = "";
+    document.getElementById("nin").innerHTML = "";
+    move = 0
+}
+</script>
