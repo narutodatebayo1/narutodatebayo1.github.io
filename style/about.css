@@ -1,0 +1,143 @@
+.blue-div {
+    background-color: #009399;
+    border: solid #23A8E0;
+    border-radius: 1.5rem;
+    box-shadow: inset 4px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about-text {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.visi-misi-image-div {
+    width: 12rem;
+    height: 8rem;
+    position: relative;
+    /* background-color: black; */
+}
+
+.visi-image {
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain;
+    position: absolute;
+    top: -2.5rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.misi-image {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 2.5rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.visi-misi-image-div > p {
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+.footer-div {
+    padding: 2rem 0 2rem 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    display: flex;
+    background-color: #F4F4F4;
+}
+
+/* .footer-div > div:nth-child(1) {
+    width: 40%;
+}
+.footer-div > div:nth-child(2) {
+    width: 40%;
+}
+.footer-div > div:nth-child(3) {
+    width: 20%;
+} */
+
+.footer-text-div {
+    width: 80%;
+    display: flex;
+    /* background-color: blue; */
+}
+
+.footer-text-div > div:nth-child(1) {
+    width: 50%;
+}
+.footer-text-div > div:nth-child(2) {
+    width: 50%;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+}
+
+
+.footer-image-div {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+}
+
+.footer-image-div > img {
+    width: 6rem;
+    object-fit: contain;
+}
+
+
+@media (max-width: 48rem) {
+    .margin-div > div {
+        margin: 0 1rem;
+    }
+
+    .about-text {font-size: 0.7rem;}
+
+    .footer-div {
+        flex-direction: column-reverse;
+        padding: 1rem 0.5rem;
+    }
+
+    .footer-text-div {
+        width: 100%;
+        justify-content: space-evenly;
+        /* font-size: 0.5rem; */
+    }
+
+    .footer-text-div > div:nth-child(1) { width: fit-content; }
+    .footer-text-div > div:nth-child(2) { width: fit-content; }
+
+    .footer-text {font-size: 0.5rem;}
+
+    .footer-image-div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

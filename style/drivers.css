@@ -1,0 +1,128 @@
+.title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+
+
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.category {
+    width: 10rem;
+    height: 10rem;
+    border: solid 2px #009399;
+    border-radius: 2rem;
+    background-color: white;
+    box-shadow: 4px 4px 4px #C0C0C0;
+    cursor: pointer;
+    user-select: none;
+
+    position: relative;
+}
+
+.category > img {
+    width: 9rem;
+    height: 9rem;
+    position: absolute;
+    
+    left: 0.5rem;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.category > p {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5rem;
+}
+
+#graphics-card-image {
+    top: 0.5rem;
+}
+
+#mini-pc-image {
+    width: 10rem;
+    height: 10rem;
+    top: -0.25rem;
+    left: 0;
+}
+
+#motherboard-image {
+    top: -0.5rem;
+    left: 0.75rem;
+}
+
+#memory-image {
+    width: 8rem;
+    height: 8rem;
+    top: 0.5rem;
+    left: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+.drivers-div {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.drivers-image-div {
+    background-color: white;
+    border: solid #009399;
+    border-radius: 2rem;
+}
+
+.drivers-image-div > img {
+    width: 15rem;
+    height: 10rem;
+    object-fit: contain;
+}
+
+.drivers-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+.drivers-name {
+    font-size: 1.25rem;
+}
+
+.download-button {
+    background-color: #009399;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: 0.15s;
+}
+
+.download-button:hover {
+    background-color: #005D61;
+}
+
+.download-button:active {
+    background-color: #00C9D1;
+}
+
+#notFoundDiv {display: none;}
+
+@media (max-width: 48rem) {
+    #driversDiv {display: none;}
+    #notFoundDiv {display: block;}
+}

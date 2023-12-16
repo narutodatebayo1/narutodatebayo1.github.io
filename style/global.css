@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+.poppins-medium {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.poppins-semi-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-blue {
+    color: #009399;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+
+
+.gap {
+    height: 4rem;
+}
+
+
+
+
+.margin-div {
+    display: flex;
+    justify-content: center;
+}
+
+.margin-div > div {
+    margin: 0 5rem;
+    width: 100%;
+    max-width: 70rem;
+    /* background-color: green; */
+}
+
+
+
+
+
+
+
+header {
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: #F4F4F4;
+    margin: 0;
+    border-radius: 1rem;
+}
+
+header > img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    margin: 5%;
+}
+
+
+
+.grey-div {
+    background-color: #F4F4F4;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+
+
+@media (max-width: 48rem) {
+    .margin-div > div {
+        margin: 0 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

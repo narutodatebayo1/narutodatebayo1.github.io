@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/search.css">
+</head>
+<body onload="searchPageLoad()">
+    
+
+    <nav class="nav-before" id="nav"></nav>
+
+    <div class="margin-div">
+        <div class="grey-div"> 
+            <p class="poppins-bold color-blue text-center title" id="title">&nbsp;</p>
+            <div class="product-list" id="res"></div>
+        </div>
+    </div>    
+    
+    <div class="gap"></div>
+
+    <footer class="margin-div" id="footer"></footer>
+
+    <script src="./component/navbar.js"></script>
+    <script src="./component/footer.js"></script>
+    <script type="module" src="./javascript/search.js"></script>
+
+</body>
+</html>
