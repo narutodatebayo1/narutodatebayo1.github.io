@@ -6,10 +6,12 @@ const nav = document.getElementById('nav')
 nav.innerHTML = `
     <div class="nav-div">
         <div class="ham-logo-div">
-            <div class="ham-div" onclick="hamClick()">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="ham-container" onclick="hamClick()">
+                <div class="ham-div">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             <a href="/"><img src="./assets/images/logo/innovation.png" /></a>
         </div>
@@ -67,7 +69,12 @@ nav.innerHTML = `
 
     <div class="pop-up-before" id="pop-up">
         <div>
-            <div class="cross" onclick="hamClick()"></div>
+            <div class="cross-div" onclick="hamClick()">
+                <div class="cross">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
         </div>
         <a class="poppins-semi-bold color-blue" href="/">Home</a>
         <a class="poppins-semi-bold color-blue" href="/product.html">Product</a>
