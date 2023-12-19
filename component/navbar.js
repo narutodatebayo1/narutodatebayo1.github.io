@@ -6,13 +6,6 @@ const nav = document.getElementById('nav')
 nav.innerHTML = `
     <div class="nav-div">
         <div class="ham-logo-div">
-            <div class="ham-container" onclick="hamClick()">
-                <div class="ham-div">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
             <a href="/"><img src="./assets/images/logo/innovation.png" /></a>
         </div>
 
@@ -28,6 +21,12 @@ nav.innerHTML = `
                     onkeydown="searchBarKeyDown(event)"
                 />
             </div>
+        </div>
+
+        <div class="ham-div" onclick="hamClick()">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
 
         <div class="nav-link-div">
@@ -76,9 +75,9 @@ nav.innerHTML = `
                 </div>
             </div>
         </div>
-        <a class="poppins-semi-bold color-blue" href="/">Home</a>
-        <a class="poppins-semi-bold color-blue" href="/product.html">Product</a>
-        <a class="poppins-semi-bold color-blue" href="/about.html">About</a>
+        <a class="poppins-semi-bold color-white" href="/">Home</a>
+        <a class="poppins-semi-bold color-white" href="/product.html">Product</a>
+        <a class="poppins-semi-bold color-white" href="/about.html">About</a>
     </div>
     <div class="background-before" id="background" onclick="hamClick()"></div>
 

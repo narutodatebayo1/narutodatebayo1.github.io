@@ -172,8 +172,8 @@ nav {
 
 
 
-.ham-container {
-    /* display: none; */
+/* .ham-container {
+    display: none;
 
     width: 2rem;
     height: 2rem;
@@ -185,12 +185,11 @@ nav {
     top: 0.5rem;
     right: 3rem;
 
-    /* background-color: black; */
 
     cursor: pointer;
-}
+} */
 
-.ham-div {
+/* .ham-div {
     position: relative;
 }
 
@@ -211,11 +210,30 @@ nav {
 }
 .ham-div > div:nth-child(3){
     top: calc(0.925rem + 0.45rem);
+} */
+
+
+
+.ham-div {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    margin-right: 1.5rem;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;   
+    gap: 0.15rem;
+
+    cursor: pointer;
 }
 
-
-
-
+.ham-div > div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #009399;
+    border-radius: 0.125rem;
+}
 
 
 
@@ -235,16 +253,12 @@ nav {
         display: none;
     }
 
-    .ham-logo-div {
-        width: 6.5rem;
-    }
-
     .ham-div {
-        display: block;
+        display: flex;
     }
 
     .nav-after > #pop-up {
-        background-color: white;
+        background-color: #009399;
         position: absolute;
         top: 0;
         left: 0;
@@ -260,7 +274,7 @@ nav {
     .cross-div {
         width: 2rem;
         height: 2rem;
-        border: solid #009399;
+        /* border: solid #009399; */
         border-radius: 0.5rem;
         position: absolute;
         top: 2rem;
@@ -272,16 +286,19 @@ nav {
 
     .cross {
         position: relative;
-        background-color: black;
+        /* background-color: white; */
     }
 
     .cross > div {
+        width: 1.5rem;
+        height: 0.2rem;
+        border-radius: 0.1rem;
+
         position: absolute;
         top: 0.9rem;
         left: 0.3rem;
-        width: 1.5rem;
-        height: 0.2rem;
-        background-color: #009399;
+        
+        background-color: white;
     }
 
     .cross > div:nth-child(1){
