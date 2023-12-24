@@ -102,7 +102,7 @@ if(category === null && id === null) {
 
                     <div>
                         <p class="poppins-bold color-blue product-detail-title">Detail Product</p>
-                        <p class="poppins-medium color-blue">Warranty: 5 Years</p>
+                        <p class="poppins-medium color-blue">Brand: ${currentProduct.brand}</p>
                     </div>
 
                     <div>
