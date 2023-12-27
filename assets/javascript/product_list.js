@@ -514,6 +514,26 @@ export const allCategory = [
                 tokopedia: "https://tokopedia.com",
                 shopee: "https://shopee.co.id",
             },
+            {
+                id: 11,
+                category: ["accessories", "Accessories"],
+                brand: "Rapoo",
+                logo: "../../assets/images/logo/rapoo.png",
+                image: "../../assets/images/product/accessories/rapoo/k8000m.png",
+                name: "Wireless Multi-Mode Keyboard K8000M",
+                tokopedia: "https://tokopedia.com",
+                shopee: "https://shopee.co.id",
+            },
+            {
+                id: 12,
+                category: ["accessories", "Accessories"],
+                brand: "Rapoo",
+                logo: "../../assets/images/logo/rapoo.png",
+                image: "../../assets/images/product/accessories/rapoo/k2800.png",
+                name: "Wireless Keyboard K2800",
+                tokopedia: "https://tokopedia.com",
+                shopee: "https://shopee.co.id",
+            },
         ]
     }
 ]
@@ -532,8 +552,4 @@ export const getOneCategory = (category) => {
     else if(category === "memory") return allCategory[4]
     else if(category === "motherboard") return allCategory[5]
     else if(category === "accessories") return allCategory[6]
-}
-
-export const radioValueChange = () => {
-    alert()
 }
