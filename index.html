@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+        body, button {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+
+            background-color: black;
+
+  backdrop-filter: blur(5px);
+        }
+        button {
+            width: 10rem;
+            height: 2.5rem;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        #changePreventerDiv, #dispensableDiv {
+            display: none;
+            margin: 0 10rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <nav>
+        <button onclick="changePreventerButton()">Change Preventer</button>
+        <button onclick="dispensableButton()">Dispensable</button>
+    </nav>
+
+    <div id="changePreventerDiv">
+        <h1>Change Preventer</h1>
+
+        <h3>Definition</h3>
+        <p>
+            Change Preventers Code Smell mengacu pada praktik atau pola pengkodean
+            yang menyulitkan atau rumit untuk memodifikasi atau memperluas basis
+            kode. Biasanya muncul karena keterkaitan antar komponen, kurangnya
+            abstraksi, atau pilihan desain yang kaku. Akibatnya, melakukan
+            perubahan pada kode, seperti menambahkan fitur baru atau
+            mengakomodasi persyaratan yang terus berkembang, menjadi tantangan
+            dan rawan kesalahan.
+        </p>
+
+        <h3>Example</h3>
+        <img src="img/cpBefore.png" />
+        <p>
+            Jika dilihat secara sekilas, class diatas tidak memiliki kesalahan. Namun
+            misalkan diperlukan fungsionalitas tambahan seperti meng-export file ke
+            dalam format yang berbeda, banyak perubahan perlu dilakukan. Oleh sebab
+            itu, class diatas perlu diganti dan method yang perlu dikeluarkan dari
+            class tersebut.
+        </p>
+
+        <h3>Treatment</h3>
+        <img src="img/cpAfter1.png" />
+        <img src="img/cpAfter2.png" />
+        <img src="img/cpAfter3.png" />
+        <p>
+            Cara memperbaikinya adalah dengan membuat class melakukan apa yang class
+            itu perlu lakukan. Jika ada method yang tidak sesuai dengan class, maka method
+            tersebut perlu dikeluarkan dan dimasukkan ke class lainnya. Pada gambar diatas
+            method "ExportTreatmentHistory" dipisah dari class Patient karena tidak memiliki
+            kolerasi dengan class tersebut dan dimasukkan ke dalam class terpisah.
+        </p>
+
+        <p>Contoh code diambil <a href="https://code-maze.com/csharp-refactoring-change-preventers/" target="_blank">disini</a></p>
+
+    </div>
+
+    <div id="dispensableDiv">
+        <h1>Dispensable</h1>
+
+        <h3>Definition</h3>
+        <p>
+            Dispensable Code Smell mengacu pada bagian kode yang tidak
+            diperlukan atau berlebihan, dan tidak memiliki tujuan fungsional dalam
+            perangkat lunak. Bagian kode ini mungkin merupakan sisa dari iterasi
+            sebelumnya, diperkenalkan sebagai perbaikan sementara, atau hanya ditulis
+            tanpa pertimbangan yang matang. Kode yang dapat dibuang dapat meningkatkan
+            kompleksitas, menurunkan keterbacaan, dan berpotensi menimbulkan bug
+            atau masalah pemeliharaan. 
+        </p>
+
+        <h3>Example</h3>
+        <img src="img/dispensableBefore.png" />
+        <p>
+            Pada kasus diatas, nama function tidak memberi penjelasan akan apa yang
+            akan dilakukan function tersebut. Oleh karena itu ditambahkanlah comment
+            diatas function untuk menjelaskan apa yang dilakukan function tersebut.
+            Namun menulis code seperti ini bukanlah hal yang baik karena sebenarnya
+            comment tersebut tidak diperlukan.
+        </p>
+
+        <h3>Treatment</h3>
+        <img src="img/dispensableAfter.png" />
+        <p>
+            Untuk memperbaiki code tersebut hal yang dapat dilakukan adalah dengan
+            mengubah nama function tersebut sesuai dengan yang dilakukan function
+            tersebut. Dengan begitu comment yang berada diatas function dapat dihapus
+            karena ketika membaca nama function, orang yang membaca akan langsung
+            memahami apa yang dilakukan function tersebut.
+        </p>
+    </div>
+
+    <script>
+
+        function changePreventerButton(){
+            window.scrollTo(0, 0);
+            document.getElementById("changePreventerDiv").style.display = "block";
+            document.getElementById("dispensableDiv").style.display = "none";
+        }
+
+        function dispensableButton(){
+            window.scrollTo(0, 0);
+            document.getElementById("changePreventerDiv").style.display = "none";
+            document.getElementById("dispensableDiv").style.display = "block";
+        }
+
+        function printHelloWorld(){
+            console.log("hello world")
+        }
+
+    </script>
+</body>
+</html>
